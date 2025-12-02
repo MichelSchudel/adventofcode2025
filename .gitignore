@@ -38,5 +38,5 @@ build/
 ### Mac OS ###
 .DS_Store
 
-src/main/resources/realinput
+src/test/resources/realinput
 .idea
