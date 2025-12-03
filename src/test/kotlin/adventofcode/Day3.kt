@@ -28,10 +28,9 @@ class Day3 {
         println(solve(list, 12))
     }
 
-    private fun solve(input: List<String>, neededElements: Int): Long {
-        val joltages = input.map { line -> findJoltage(line.map { it.toString().toInt()}, neededElements) }
-        return joltages.sumOf { it.toLong() }
-    }
+    private fun solve(input: List<String>, neededElements: Int): Long =
+        input.map { line -> findJoltage(line.map { it.toString().toInt() }, neededElements) }
+            .sumOf { it.toLong() }
 
     private fun findJoltage(elements: List<Int>, neededElements: Int): String {
         var currentList = elements
