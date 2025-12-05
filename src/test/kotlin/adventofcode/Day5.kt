@@ -46,14 +46,14 @@ class Day5 {
         var total = 0L
 
         for (i in 1 until sorted.size) {
-            val r = sorted[i]
+            val currentRange = sorted[i]
 
-            if (r.first <= mergedEnd + 1) {
-                mergedEnd = maxOf(mergedEnd, r.second)
+            if (currentRange.first <= mergedEnd + 1) {
+                mergedEnd = maxOf(mergedEnd, currentRange.second)
             } else {
                 total += (mergedEnd - mergedStart + 1)
-                mergedStart = r.first
-                mergedEnd = r.second
+                mergedStart = currentRange.first
+                mergedEnd = currentRange.second
             }
         }
 
